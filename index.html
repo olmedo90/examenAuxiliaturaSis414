@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div></div>
+     <div>
+        <img src="download.png" alt="" id="juguete">
+     </div>
+</body>
+<script>
+    let juguete = document.getElementById("juguete");
+    let velocidad = 20;
+    let mtop = 0;
+    let mylef = 0;
+    document.addEventListener("keydown", function(e) {
+        if (e.keyCode == "39"){
+            moverDerecha();
+        }
+        if (e.keyCode == "37"){
+            moverIsquierda();
+        }
+        if (e.keyCode == "38"){
+            moverArriba();
+        }
+        if (e.keyCode == "40"){
+            moverabajo();
+        }
+       
+    })
+  
+
+    function moverDerecha (){
+        mylef +=velocidad;
+        juguete.style.marginLeft = mylef + "px"; 
+    }
+    function moverIsquierda (){
+        mylef -=velocidad;
+        juguete.style.marginLeft = mylef + "px"; 
+    }
+    function moverabajo (){
+        mtop +=velocidad;
+        juguete.style.marginTop = mtop + "px"; 
+    }
+    function moverArriba (){
+        mtop -=velocidad;
+        juguete.style.marginTop = mtop + "px"; 
+    }
+</script>
+
+</html>
